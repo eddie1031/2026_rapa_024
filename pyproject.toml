@@ -1,0 +1,12 @@
+[project]
+name = "fastapiexp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "aiomysql>=0.3.2",
+    "fastapi[standard]>=0.138.1",
+    "pydantic-settings>=2.14.2",
+    "sqlalchemy>=2.0.51",
+]

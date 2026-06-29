@@ -1,0 +1,14 @@
+name: fab
+
+services:
+
+  db:
+    image: mysql
+    container_name: fsb-db
+    ports:
+      - "3307:3306"
+    environment:
+      - "MYSQL_ALLOW_EMPTY_PASSWORD=true"
+      - "MYSQL_DATABASE=fsb"
+      - "MYSQL_USER=happy"
+      - "MYSQL_PASSWORD=day"
