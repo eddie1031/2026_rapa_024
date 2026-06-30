@@ -1,10 +1,12 @@
 from fastapi import FastAPI
+from app.boards.router import router as board_router
+
+import app.boards.models
+import app.posts.models
 
 app = FastAPI()
 
-@app.get("/")
-async def index():
-    return {
-        "message": "백엔드 화이팅!"
-    }
+app.include_router(router=board_router)
+
+
 
