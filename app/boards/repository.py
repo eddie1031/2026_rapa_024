@@ -22,9 +22,10 @@ class BoardRepository:
         find_board = result.scalar_one_or_none()
         return find_board
 
-    async def find_all(self) -> List[Board]:
-        boards = await self.session.execute(select(Board))
-        return boards
+    async def find_all(self):
+        results = await self.session.execute(select(Board))
+        return results.scalars().all()
+
 
     async def delete(self, board: Board) -> None:
         await self.session.delete(board)
